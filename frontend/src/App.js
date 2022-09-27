@@ -1,23 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
+import { signin, signup } from './backend/controllers/auth';
+import React from 'react'
+import ReactDOM from 'react-dom/client';
+import {BrowserRouter} from "react-router-dom";
+import  './backend'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div> 
+      <BrowserRouter>
+            {/* <Routes>   */}
+                  {/* <Route path="/" element={<Layout />}>
+                  <Route index element={<Home />} />
+                  <Route path="blogs" element={<Blogs />} />
+                  <Route path="contact" element={<Contact />} />
+                  <Route path="*" element={<NoPage />} />
+                  </Route>
+                  </Routes> */}
+                  </BrowserRouter>
+                  <label>Username : </label>   
+                  <input type="text" placeholder="Enter Username" name="username" required="true" />  
+                  <label>Password : </label>   
+                  <input type="password" placeholder="Enter Password" name="password" required="true" />  
+                  <button type="button" onClick={signin}>Login</button> 
+                  <button type="button" onClick={signup}> Signup</button>
+                  <input type="checkbox" checked="checked" /> Remember me   
+                  <button type="button" class="cancelbtn"> Cancel</button>   
+                  
     </div>
   );
 }
