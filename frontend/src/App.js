@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import { signin, signup } from './backend/controllers/auth';
+import { signin, signup } from '../../backend/controllers/auth';
 import React from 'react'
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter} from "react-router-dom";
-import  './backend'
+import  '../../backend'
 
 
 function App() {
